@@ -3,8 +3,9 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Python1",
-				"type": "DatabricksSparkPython",
+				"name": "Processo 1 - Download FTP",
+				"description": "Notebook com o código em python que faz o download dos arquivos 7zip para dentro do DBFS.",
+				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,13 +16,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"pythonFile": "dbfs:/FileStore/test.py",
-					"parameters": [],
-					"libraries": [
-						{
-							"jar": ""
-						}
-					]
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 1 - Download FTP"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
