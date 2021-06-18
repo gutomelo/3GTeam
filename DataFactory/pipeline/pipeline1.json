@@ -22,6 +22,27 @@
 					"referenceName": "AzureDatabricks1",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Processo 2 - Extracao das pastas de 2010 a 2017",
+				"description": "Notebook com o código em python que faz a extração dos arquivos 7zip das pastas de 2010 a 2017 ",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 2 - Extração das pastas de 2010 a 2017"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
