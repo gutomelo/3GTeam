@@ -16,6 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pythonFile": "dbfs:/FileStore/test.py",
+					"parameters": [],
 					"libraries": [
 						{
 							"jar": ""
