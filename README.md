@@ -1,10 +1,7 @@
-# OBS: !!!!Projeto em construção!!!
-
-
 ## O projeto consiste em fazer o download do arquivos Rais no ftp do Ministério do trabalho. Descompactar os arquivos que estão no formato 7-Zip. E enviar para o Datalake no Azure Datalake Gen2.
 
-## Todo processo será orquestrado pelo Apache Airflow.
-
+Nossa arqutetura é baseado na Cloud da Azure, utilizamos o Databricks na produção do código PYthon e processamento dos dados com o Spark.
+Todo o pipeline foi contruido em cima do Azure DataFactory de forma totalmente automatizada.
 
 ## Procedimentos:
 -  Utilizado o DataBricks e a biblioteca FTP para download dos dados do servidor FTP
