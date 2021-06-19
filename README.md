@@ -7,15 +7,15 @@
 
 
 ## Procedimentos:
-O AirFlow será executado num container Docker dentro de uma máquina virtual com o a distribuição Ubuntu no Azure.
+-  Utilizado o DataBricks e a biblioteca FTP para download dos dados do servidor FTP
+(ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/)
 
-Aṕos criado a máquina virtual com o Ubuntu e configurado o docker e docker-compose, fazer o download projeto Yaml no site do Apache Airflow.
+- Utilizado  o DataBricks para extração e processamento dos dados para arquivos Parquet (não tratados)
 
-Comandos:
+- Extraidos os dados no Datalake no formato Parquet (Tratados)
 
-> curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.1.0/docker-compose.yaml'
+- Utilizado o Azure Synapse para criação de tabelas externas visualizando os dados
+do Data Lake Storage.
 
-> docker-compose up -d
-
-
- 
+- Utilizado o Power Bi para visualização dos dados, tanto da base geral no Synapse,
+quanto as tables no DataBricks.
