@@ -246,6 +246,34 @@
 					"referenceName": "AzureDatabricks1",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Processo 10 - Resultado Final",
+				"description": "Resultado Final da Extração dos dados",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 9 - Parquet de 2019",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Resultado Final do Tratamento"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
