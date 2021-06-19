@@ -78,6 +78,174 @@
 					"referenceName": "AzureDatabricks1",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Processo 4 - Parquet de 2010 a 2014",
+				"description": "Processo 4 - Gerando o parquet de 2010 a 2014",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 3 - Extracao das pastas 2018 e 2019",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 4 - Gerando os dados convertidos em parquet"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Processo 5 - Parquet de 2015",
+				"description": "Processo 5 - Gerando o parquet de 2015",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 4 - Parquet de 2010 a 2014",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 5 - Gerando os dados de 2015 convertidos em parquet"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Processo 6 - Parquet de 2016",
+				"description": "Processo 6 - Gerando o parquet de 2016",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 5 - Parquet de 2015",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 6 - Gerando os dados de 2016 convertidos em parquet"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Processo 8 - Parquet de 2018",
+				"description": "Processo 8 - Gerando o parquet de 2018",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 7 - Parquet de 2017",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 8 - Gerando os dados de 2018 convertidos em parquet"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Processo 7 - Parquet de 2017",
+				"description": "Processo 7 - Gerando o parquet de 2017",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 6 - Parquet de 2016",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon/Processo 7 - Gerando os dados de 2017 convertidos em parquet"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Processo 9 - Parquet de 2019",
+				"description": "Processo 9 - Gerando o parquet de 2019",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Processo 8 - Parquet de 2018",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/gutomeloba@gmail.com/Hackathon"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
