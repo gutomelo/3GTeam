@@ -2,7 +2,7 @@
 
 ### Proposta
 
-O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor [FTP](ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho. Todo o pipeline foi contruido em cima do Azure DataFactory de forma totalmente automatizada.
+O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho. Todo o pipeline foi contruido em cima do Azure DataFactory de forma totalmente automatizada.
 
 
 ## Procedimentos
