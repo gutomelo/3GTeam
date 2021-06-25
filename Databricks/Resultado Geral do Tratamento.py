@@ -1,7 +1,7 @@
 # Databricks notebook source
 # Read parquet
 
-parquetFile = spark.read.parquet("data/rais/")
+parquetFile = spark.read.parquet("/mnt/trusted/rais/")
 
 # COMMAND ----------
 
@@ -63,13 +63,29 @@ tratato.createOrReplaceTempView("tratato")
 
 # COMMAND ----------
 
-tratato.write.parquet(f'refined/rais/Ano=2019/UF={estado}').partitions('UF', 'Ano')
+#saida = '/mnt/trusted/'
+tratato.write.parquet('/mnt/refined/rais/').partitionBy('Ano', 'UF')
 
 # COMMAND ----------
 
 # Read parquet
 
-parquetFile = spark.read.parquet("data/rais/")
+parquetFile = spark.read.parquet("/mnt/refined/rais/")
+
+# COMMAND ----------
+
+parquetFile.createOrReplaceTempView("parquetFile")
+
+# COMMAND ----------
+
+spark.sql(
+"""
+SELECT count(*) FROM parquetFile
+GROUP   
+
+"""
+
+).show()
 
 # COMMAND ----------
 
@@ -79,14 +95,30 @@ spark.sql("""
 SELECT
   Ano,
   Sexo_Trabalhador,
-  AVG(Vl_Remun_Media_Nom)
+  AVG(Vl_Remun_Media_Nom) as Remun_Media_Nom
 FROM tratato
 WHERE (CNAE_2_0_Classe LIKE '62%'
 OR CNAE_2_0_Classe LIKE '631%') AND (UF = 'SP' OR UF = 'RJ' OR UF = 'MG' OR UF = 'ES')
 GROUP BY Ano,
          Sexo_Trabalhador
 ORDER BY Ano, Sexo_Trabalhador
-""").show(5)
+""").write.saveAsTable("Pergunta_1")
+
+# COMMAND ----------
+
+
+varsql = spark.sql("""
+SELECT * FROM pergunta1
+  
+""")
+
+varsql.createOrReplaceTempView("varsql")
+
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC SELECT * FROM varsql;
 
 # COMMAND ----------
 
@@ -96,7 +128,7 @@ spark.sql("""
 SELECT
   Ano,
   Escolaridade_apos_2005,
-  AVG(Vl_Remun_Media_Nom)
+  AVG(Vl_Remun_Media_Nom) AS Remun_Media_Nom
 
 FROM tratato
 WHERE (CNAE_2_0_Classe LIKE '011%'
@@ -108,7 +140,7 @@ OR CNAE_2_0_Classe LIKE '016%') AND (UF = 'RS' OR UF = 'SC' OR UF = 'PR')
 GROUP BY Ano,
          Escolaridade_apos_2005
 ORDER BY Ano, Escolaridade_apos_2005
-""").show(5)
+""").write.saveAsTable("Pergunta_2")
 
 # COMMAND ----------
 
@@ -137,13 +169,13 @@ spark.sql("""
 SELECT
     Ano,
     Escolaridade_apos_2005,
-    AVG(Vl_Remun_Media_Nom)
+    AVG(Vl_Remun_Media_Nom) AS Remun_Media_Nom
     
 FROM
     saude
 GROUP BY Ano, Escolaridade_apos_2005
 ORDER BY Ano, Escolaridade_apos_2005
-""").show(5)
+""").write.saveAsTable("Pergunta_3")
 
 # COMMAND ----------
 
@@ -158,9 +190,13 @@ SELECT
     'tecnologia' AS Setor
     FROM tratato
     WHERE CNAE_2_0_Classe LIKE '62%' OR CNAE_2_0_Classe LIKE '631%'
-""")
+""").write.saveAsTable("teste2")
 
 tecnologia.createOrReplaceTempView("tecnologia")
+
+# COMMAND ----------
+
+teste.write.saveAsTable("testeee")
 
 # COMMAND ----------
 
@@ -170,13 +206,13 @@ spark.sql("""
 SELECT
     Ano,
     Escolaridade_apos_2005,
-    AVG(Vl_Remun_Media_Nom)
+    AVG(Vl_Remun_Media_Nom) AS Remun_Media_Nom
     
 FROM
     tecnologia
 GROUP BY Ano, Escolaridade_apos_2005
 ORDER BY Ano, Escolaridade_apos_2005
-""").show(5)
+""").write.saveAsTable("Pergunta_3")
 
 # COMMAND ----------
 
@@ -203,13 +239,13 @@ spark.sql("""
 SELECT
   Ano,
   Escolaridade_apos_2005,
-  AVG(Vl_Remun_Media_Nom)
+  AVG(Vl_Remun_Media_Nom) AS Vl_Remun_Media_Nom
 
 FROM auto
 GROUP BY Ano,
          Escolaridade_apos_2005
 ORDER BY Ano, Escolaridade_apos_2005
-""").show(5)
+""").write.saveAsTable("Pergunta_3")
 
 # COMMAND ----------
 
@@ -223,7 +259,7 @@ FROM tecnologia
 WHERE Qtd_Hora_Contr < 40
 GROUP BY ano
 ORDER BY ano
-""").show()
+""").write.saveAsTable("Pergunta_4")
 
 # COMMAND ----------
 
@@ -237,7 +273,7 @@ FROM auto
 WHERE Qtd_Hora_Contr < 40
 GROUP BY ano
 ORDER BY ano
-""").show()
+""").write.saveAsTable("Pergunta_4")
 
 # COMMAND ----------
 
@@ -267,4 +303,4 @@ WHERE Ind_Trab_Intermitente = 1
 GROUP BY Ano,
          Sexo_Trabalhador
 ORDER BY Ano, Sexo_Trabalhador
-""").show()
+""").write.saveAsTable("Pergunta_5")
