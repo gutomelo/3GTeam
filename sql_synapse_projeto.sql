@@ -14,7 +14,7 @@ CREATE EXTERNAL DATA SOURCE DataLakeA3v2
 WITH
 	(
 	TYPE = Hadoop,
-	LOCATION = 'abfss://refined@datalakehackathon.dfs.core.windows.net',
+	LOCATION = 'abfss://refined@accountstorage.dfs.core.windows.net',
 	CREDENTIAL = CredencialAzureProjeto2
 	) ;
 
