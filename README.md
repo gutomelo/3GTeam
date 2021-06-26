@@ -1,8 +1,8 @@
 ## Projeto Hackathon A3Data - 3G Team
 
-Este repositório representa o projeto apresentado pela equipe 3GTeam no Hackathon da empresa A3Data no mês de Junho de 2021.
+Este repositório representa o projeto apresentado pela equipe 3GTeam no Hackathon da A3Data no mês de Junho de 2021.
 
-O desafio proposto era a criação de um pipeline de extração, transformação e disponibilização de dados. Após extração, limpeza, organização e estruturação  dos dados, as perguntas chave do desafio devem ser respondidas de maneira visual. 
+Onde os times devem implementar pipeline de extração, transformação e disponibilização de dados. Após extração, limpeza, organização e estruturação  dos dados, as perguntas chave do desafio devem ser respondidas de maneira visual. 
 
 Perguntas Chave:
 
@@ -73,7 +73,7 @@ O vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.you
 
 
 
-- Synapse - Criação de tabelas externas referenciando o local dos dados Parquet no data lake
+- Synapse - Criação de tableas externas referenciando o local dos dados no data lake
 
   ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/tabela_externa_synapse.JPG?raw=true)
 
@@ -100,8 +100,6 @@ Decidimos estruturar o Datalake em 3 camadas:
 - A camada RAW onde fica os dados brutos baixados e descompactados.
 - A camada TRUSTED onde fica os dados brutos armazenados em Parquet para possíveis consultas e Insights no futuro.
 - A camada REFINED onde fica os dados tratatos e processados pelo Spark para ser consumido pelo Synapse e PowerBI.
-
-
 
 ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/estrutura_datalakepng.png?raw=true)
 
