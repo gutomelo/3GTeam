@@ -2,14 +2,14 @@
 
 ### Proposta
 
-O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho. Todo o pipeline foi contruido em cima do Azure DataFactory de forma totalmente automatizada.
+O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP. (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho. Todo o pipeline foi contruido em cima do Azure DataFactory de forma totalmente automatizada.
 
 
 ## Procedimentos
 
 ### Arquitetura
 
-![alt text](https://github.com/gutomelo/3GTeam/blob/master/Png/arquitetura.png)
+![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/arquitetura.png)
 
 ### As tecnologias trabalhadas nesse projeto são baseadas na Cloud da Azure:
 
@@ -30,5 +30,7 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
 ### Estrutura do datalake:
 
-![alt text](https://github.com/gutomelo/3GTeam/blob/master/Png/estrutura_datalakepng.png)
+![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/estrutura_datalakepng.png)
+
+
 
