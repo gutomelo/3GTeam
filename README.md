@@ -1,4 +1,4 @@
-## :chart_with_downwards_trend:  Pipeline  de extração, transformação e disponibilização dos dados  :bar_chart:
+## :chart_with_downwards_trend:  > Projeto Hackathon A3Data - 3G Team <  :bar_chart:
 
 Este repositório representa o projeto apresentado pela equipe 3GTeam no Hackathon da A3Data no mês de Junho de 2021.
 
@@ -15,6 +15,10 @@ Perguntas Chave:
 ### Proposta
 
 O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP. (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho. Todo o pipeline foi contruido em cima do Azure DataFactory de forma totalmente automatizada.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hIQnx7KVDd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 
 ## Procedimentos
