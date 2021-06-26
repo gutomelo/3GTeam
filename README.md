@@ -18,7 +18,7 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
 Todos o código-fonte do projeto encontra-se nesse repositório!
 
-O Vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.youtube.com/embed/hIQnx7KVDd8
+O Vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.youtube.com/watch?v=hIQnx7KVDd8
 
 
 
