@@ -105,6 +105,8 @@ Decidimos estruturar o Datalake em 3 camadas:
 
 
 
+
+
 ### Custo Total aproximado do projeto
 
 O custo do projeto envolveu desde o desenvolvimento a implantação do mesmo. 
