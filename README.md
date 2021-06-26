@@ -1,4 +1,4 @@
-## Pipeline  de extração, transformação e disponibilização dos dados !
+## :chart_with_downwards_trend:  Pipeline  de extração, transformação e disponibilização dos dados  :bar_chart:
 
 Este repositório representa o projeto apresentado pela equipe 3GTeam no Hackathon da A3Data no mês de Junho de 2021.
 
