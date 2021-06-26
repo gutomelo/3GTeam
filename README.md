@@ -98,6 +98,8 @@ Decidimos estruturar o Datalake em 3 camadas:
 - A camada TRUSTED onde fica os dados brutos armazenados em Parquet para possíveis consultas e Insights no futuro.
 - A camada REFINED onde fica os dados tratatos e processados pelo Spark para ser consumido pelo Synapse e PowerBI.
 
+
+
 ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/estrutura_datalakepng.png?raw=true)
 
 
