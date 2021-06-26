@@ -1,4 +1,4 @@
-## >  Projeto Hackathon A3Data - 3G Team  <
+## Projeto Hackathon A3Data - 3G Team
 
 Este repositório representa o projeto apresentado pela equipe 3GTeam no Hackathon da A3Data no mês de Junho de 2021.
 
