@@ -16,7 +16,7 @@ Perguntas Chave:
 
 O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho.  A automatização do processo foi feito em Python através de Notebooks do Databricks e a orchestração do pipeline feita no DataFactory. O armazenamento foi realizado no Data-lake do Azure. O processamento dos dados foram feito em PySpark em cluster Spark do Databricks. Os dados resultantes foram tratados pelo Synapse Analytics e visualizado em Dashboad via Power BI.
 
-Todos o código-fonte do projeto encontra-se nesse repositório!
+Todo o código-fonte do projeto encontra-se nesse repositório!
 
 O Vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.youtube.com/watch?v=hIQnx7KVDd8
 
