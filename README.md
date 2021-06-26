@@ -14,12 +14,24 @@ Perguntas Chave:
 
 ### Proposta
 
-O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho.  A automatização do processo foi feito em Python através de Notebooks do Databricks e a orchestração do pipeline feita no DataFactory. O armazenamento foi realizado no Data-lake do Azure. O processamento dos dados foram feito em PySpark em cluster Spark do Databricks. Os dados resultantes foram tratados pelo Synapse Analytics e visualizado em Dashboad via Power BI.
+O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RAIS disponibilizados pelo governo em um servidor FTP (ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/) do Ministério do Trabalho.  
+
+### Desenvolvimento
+
+A automatização do processo foi feito em Python através de Notebooks do Databricks e a orchestração do pipeline feita no DataFactory. O armazenamento foi realizado no Data-lake do Azure. O processamento dos dados foram feito em PySpark em cluster Spark do Databricks. O Synapse Analytics criou as tabelas externas referenciando ao Datalake para serem visualizados em Dashboad via Power BI.
 
 Todo o código-fonte do projeto encontra-se nesse repositório!
 
 O vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.youtube.com/watch?v=hIQnx7KVDd8
 
+###### Etapas realizadas:
+
+- Extração dos arquivos da RAIS de um servidor FTP do Ministério do Trabalho
+- Descompactação dos arquivos 7Z para txt
+- Processamento das bases, limpeza e tratamento dos dados e criação de tabelas no Databricks
+- Armazenamento da base completa em formato Parquet no data lake
+- Utilização do Azure Synapase para criação de tabelas externas referenciando o local dos arquivos parquet no data lake
+- Power BI para visualizção dos dados no Synapse
 
 
 
@@ -81,15 +93,6 @@ O vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.you
 
   
 
-### Etapas realizadas:
-
-- Extração dos arquivos da RAIS de um servidor FTP do Ministério do Trabalho
-- Descompactação dos arquivos 7Z para txt
-- Processamento das bases, limpeza e tratamento dos dados e criação de tabelas no Databricks
-- Armazenamento da base completa em formato Parquet no data lake
-- Utilização do Azure Synapase para criação de tabelas externas referenciando o local dos arquivos parquet no data lake
-- Power BI para visualizção dos dados no Synapse
-
 ### Estrutura do datalake:
 
 Decidimos estruturar o Datalake em 3 camadas:
@@ -103,6 +106,16 @@ Decidimos estruturar o Datalake em 3 camadas:
 
 
 ### Custo Total aproximado do projeto
+
+O custo do projeto envolveu desde o desenvolvimento a implantação do mesmo. 
+
+Está diretamente relacionado:
+
+- Armazenamento dos dados no Datalake: 21gb de dados compactados, 274gb de dados descompactados e dados tratados.
+- Processamento dos dados do cluster Spark no Databricks.
+- Recursos do Azure: Worspace Databricks, Synapse Analytics e DataFactory.
+
+
 
 ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/Custo_Total.png?raw=true)
 
