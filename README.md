@@ -21,21 +21,59 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
 ### Arquitetura
 
-![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/arquitetura.png)
+![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/arquitetura.png?raw=true)
+
+
+
+
 
 ### As tecnologias trabalhadas nesse projeto são baseadas na Cloud da Azure:
+
+
 
 - Data Factory - Orquestração do Pipeline (Notebooks)
 
   ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/pipeline1.png?raw=true)
 
+  
+
+
+
 - Databricks - Processamento  em Spark do download, extração, limpeza  e tratamento dos dados
+
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/databricks.png?raw=true)
+
+
+
+
 
 - Data Lake Storage Gen2 - Armazenamento dos dados txt e parquet
 
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/datalake all.png?raw=true)
+
+
+
+
+
 - Synapse - Criação de tableas externas referenciando o local dos dados no data lake
 
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/tabela_externa_synapse.JPG?raw=true)
+
+
+
+
+
 - Power BI - Visualização dos dados
+
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/trabalho_intermitente.PNG?raw=true)
+
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/agronegocio.PNG?raw=true)
+
+  
+
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/salario meio tecnologia.PNG?raw=true)
+
+  
 
 ### Etapas realizadas:
 
@@ -48,7 +86,15 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
 ### Estrutura do datalake:
 
-![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/estrutura_datalakepng.png)
+![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/estrutura_datalakepng.png?raw=true)
+
+
+
+### Custo Total aproximado do projeto
+
+![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/Custo Total.png?raw=true)
+
+
 
 
 
