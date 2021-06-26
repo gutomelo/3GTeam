@@ -61,7 +61,7 @@ O vídeo de apresentação pode ser acompanhado aqui no youtube: https://www.you
 
 
 
-- Synapse - Criação de tableas externas referenciando o local dos dados no data lake
+- Synapse - Criação de tabelas externas referenciando o local dos dados Parquet no data lake
 
   ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/tabela_externa_synapse.JPG?raw=true)
 
