@@ -49,7 +49,7 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
 - Data Lake Storage Gen2 - Armazenamento dos dados txt e parquet
 
-  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/datalake all.png?raw=true)
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/datalake_all.png?raw=true)
 
 
 
@@ -71,7 +71,7 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
   
 
-  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/salario meio tecnologia.PNG?raw=true)
+  ![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/salario_meio_tecnologia.PNG?raw=true)
 
   
 
@@ -92,7 +92,7 @@ O projeto consiste na construção de um Pipeline de ETL dos dados abertos da RA
 
 ### Custo Total aproximado do projeto
 
-![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/Custo Total.png?raw=true)
+![alt text](https://github.com/gutomelo/3GTeam/blob/master/images/Custo_Total.png?raw=true)
 
 
 
