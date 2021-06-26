@@ -6,7 +6,7 @@
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
-			"domain": "https://adb-2416743275397063.3.azuredatabricks.net",
+			"domain": "https://adb-dgffdsdsdff.3.azuredatabricks.net",
 			"newClusterNodeType": "Standard_DS4_v2",
 			"newClusterNumOfWorker": "1",
 			"newClusterSparkEnvVars": {
